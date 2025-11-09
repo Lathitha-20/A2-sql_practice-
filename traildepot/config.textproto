@@ -9,3 +9,8 @@ auth {
   refresh_token_ttl_sec: 2592000
 }
 jobs {}
+record_apis: [{
+  name: "temp_user"
+  table_name: "temp_user"
+  acl_world: [CREATE, READ]
+}]
