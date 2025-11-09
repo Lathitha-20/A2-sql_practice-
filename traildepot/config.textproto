@@ -12,5 +12,22 @@ jobs {}
 record_apis: [{
   name: "temp_user"
   table_name: "temp_user"
-  acl_world: [CREATE, READ]
+  acl_world: [CREATE, READ, UPDATE, DELETE, SCHEMA]
+}, {
+  name: "assignments"
+  table_name: "assignments"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [CREATE, READ, UPDATE, DELETE, SCHEMA]
+}, {
+  name: "departments"
+  table_name: "departments"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+}, {
+  name: "employees"
+  table_name: "employees"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+}, {
+  name: "projects"
+  table_name: "projects"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
 }]
